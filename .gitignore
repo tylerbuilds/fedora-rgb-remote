@@ -1,0 +1,18 @@
+# Private/runtime data never belongs in this repository
+vendor/
+research*/
+ram-helper/
+*.spd
+*.orp
+*.ors
+*.rpm
+*.log
+*.tmp
+*.before*
+last-colour.json
+__pycache__/
+.env
+.env.*
+local.env
+config/*
+!config/OpenRGB.json

@@ -1,0 +1,18 @@
+[Unit]
+Description=Private Fedora PC lighting remote
+StartLimitIntervalSec=0
+[Service]
+Type=notify
+NotifyAccess=main
+ExecStart=/usr/bin/python3 @PROJECT@/server.py
+WorkingDirectory=@PROJECT@
+EnvironmentFile=%h/.config/fedora-rgb-remote/local.env
+Restart=always
+RestartSec=3
+WatchdogSec=30
+TimeoutAbortSec=5
+TimeoutStopSec=5
+LimitCORE=0
+UMask=0077
+[Install]
+WantedBy=default.target
